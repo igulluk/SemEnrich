@@ -1,0 +1,16 @@
+sign_determination:
+  method: llm
+  llm:
+    provider: deepseek
+    model: deepseek-chat
+    api_key: .
+    temperature: 0.9
+output:
+  save_signs: true
+  save_examples: true
+  n_examples: 50
+  output_dir: ./experiments/outputs/clustering
+  save_prefix: kmeans_K1000
+clustering:
+  cluster_file: ./experiments/outputs/clustering/kmeans_clusters.json
+  cluster_to_texts_file: ./experiments/outputs/clustering/kmeans_cluster_to_texts.json

@@ -1,0 +1,18 @@
+data:
+  data_path: ./data
+  n_samples: 300000
+  subset_name: subset_300000
+clustering:
+  cluster_file: ./experiments/outputs/clustering/hdbscan_clusters.json
+  cluster_to_texts_file: ./experiments/outputs/clustering/hdbscan_cluster_to_texts.json
+  cluster_signs_file: ./experiments/outputs/clustering/hdbscan_signs.json
+expansion:
+  adjacency_threshold_norm: 0.001
+  adjacency_threshold_count: 3
+  only_positive_expansion: true
+output:
+  output_dir: ./experiments/outputs/expansion
+  save_adjacency_matrix: true
+  save_expansion_results: true
+  save_statistics: true
+  save_prefix: expansion_hdbscan

@@ -1,0 +1,31 @@
+clustering:
+  algorithm: hdbscan
+  cluster_selection_epsilon: 0.0
+  metric: euclidean
+  min_cluster_size: 5
+  min_samples: 5
+  random_seed: 42
+
+data:
+  data_path: ./data
+  feature_dir: ./extracted_features
+  n_samples: 300000
+  subset_name: subset_300000
+
+evaluation:
+  metrics:
+  - silhouette
+  - davies_bouldin
+  - calinski_harabasz
+  visualization: true
+  visualization_methods:
+  - tsne
+  - pca
+
+output:
+  output_dir: ./experiments/outputs/clustering
+  save_cluster_mapping: true
+  save_cluster_to_texts: true
+  save_metrics: true
+  save_prefix: hdbscan_N300k
+  save_visualizations: true
